@@ -22,8 +22,8 @@ public class App {
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> values = new ArrayList<>();
-
-
+        int sum = 0;
+        System.out.println("give me some numbers");
         while(true){
             int input = Integer.valueOf(scanner.nextLine());
             if(input == -1){
@@ -31,8 +31,16 @@ public class App {
             }
             values.add(input);
         }
-
+        System.out.println("find limit");
         System.out.println("");
+        int number = Integer.valueOf(scanner.nextLine());
+        for (int num : values) {
+            if (num< number) {
+                sum += num;
+            }
+        }
+
+        System.out.println(sum);
         //Write your code below here
 
 
